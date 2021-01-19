@@ -12,3 +12,4 @@ web_flask/__pycache__/2-c_route.cpython-34.pyc
 .gitignore
 web_flask/__pycache__/3-python_route.cpython-34.pyc
 web_flask/__pycache__/4-number_route.cpython-34.pyc
+web_flask/__pycache__/5-number_template.cpython-34.pyc
