@@ -13,10 +13,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import scoped_session
 
 classes = {
-               'BaseModel': BaseModel, 'User': User, 'Place': Place,
-               'State': State, 'City': City, 'Amenity': Amenity,
-               'Review': Review
-              }
+    'BaseModel': BaseModel, 'User': User, 'Place': Place,
+    'State': State, 'City': City, 'Amenity': Amenity,
+    'Review': Review
+    }
 
 
 class DBStorage():
@@ -70,7 +70,8 @@ class DBStorage():
 
     def close(self):
         """
-            call remove() method on the private session attribute (self.__session)
+            call remove() method on the private
+            session attribute (self.__session)
             or close() on the class Session
         """
         self.__session.remove()
