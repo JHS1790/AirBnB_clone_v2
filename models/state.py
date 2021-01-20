@@ -16,14 +16,14 @@ class State(BaseModel, Base):
                           backref='state')
 
 
-if getenv('HBNB_TYPE_STORAGE') != 'db':
     @property
     def cities(self):
         """getter for cities"""
-        from models import storage
-        cities_list = []
-        cities_dict = storage.all(City)
-        for city in cities_dict.values():
-            if self.id == city.state_id:
-                cities_list.append(city)
-        return cities_list
+        if getenv('HBNB_TYPE_STORAGE') != 'db':
+            from models import storage
+            cities_list = []
+            cities_dict = storage.all(City)
+            for city in cities_dict.values():
+                if self.id == city.state_id:
+                    cities_list.append(city)
+            return cities_list
