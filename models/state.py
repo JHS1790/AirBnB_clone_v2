@@ -15,7 +15,6 @@ class State(BaseModel, Base):
                           cascade='all, delete',
                           backref='state')
 
-
     @property
     def cities(self):
         """getter for cities"""
