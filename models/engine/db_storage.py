@@ -39,9 +39,9 @@ class DBStorage():
     def all(self, cls=None):
         """Gets all of cls type or all types if cls is None"""
         newDict = {}
-        for _ in classes:
+        for _ in classes.values():
             if cls is None or cls == _:
-                objs = self.__session.query(classes[_]).all()
+                objs = self.__session.query(_).all()
                 for obj in objs:
                     key = obj.__class__.__name__ + '.' + obj.id
                     newDict.update({key: obj})
@@ -74,4 +74,4 @@ class DBStorage():
             session attribute (self.__session)
             or close() on the class Session
         """
-        self.__session.remove()
+        self.__session.close()
