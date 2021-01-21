@@ -21,3 +21,5 @@ web_flask/__pycache__/7-states_list.cpython-34.pyc
 */__pycache/*
 web_flask/__pycache__/8-cities_by_states.cpython-34.pyc
 web_flask/__pycache__/9-states.cpython-34.pyc
+10-dump.sql
+web_flask/__pycache__/10-hbnb_filters.cpython-34.pyc
