@@ -21,7 +21,6 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             """getter for cities"""
-            #if getenv('HBNB_TYPE_STORAGE') != 'db':
             from models import storage
             cities_list = []
             cities_dict = storage.all(City)
