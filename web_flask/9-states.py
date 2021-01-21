@@ -25,7 +25,8 @@ def listStatesCities(id):
         if state.id == id:
             stateID = state
             result = 'yay'
-            return render_template("9-states.html", result=result, stateID=stateID)
+            return render_template("9-states.html", result=result,
+                                   stateID=stateID)
     return render_template("9-states.html", result=result)
 
 
