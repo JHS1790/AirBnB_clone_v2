@@ -43,6 +43,9 @@
 
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
+
+	position: relative;
+	z-index: 1;
 }
 
 .locations:hover .popover {
