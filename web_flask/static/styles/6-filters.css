@@ -9,19 +9,21 @@
 
 .locations {
 	display: inline;
-	vertical-align: middle;
+	vertical-align: left;
 	height: 100%;
 	width: 25%;
+	float: left;
 
 	line-height: 20px;
 	border-right: 1px solid #DDDDDD;
 }
 
-.filter_amenities {
+.amenities {
 	display: inline;
 	vertical-align: middle;
 	height: 100%;
-    width: 25%;
+	width: 25%;
+	float: left;
 
 	line-height: 20px;
 }
@@ -47,7 +49,7 @@
 	display: inline-block;
 }
 
-.filter_amenities:hover .popover {
+.amenities:hover .popover {
 	display: inline-block;
 }
 

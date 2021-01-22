@@ -5,6 +5,7 @@ from flask import Flask
 from flask import render_template
 from models import storage
 from models.state import State
+from models.amenity import Amenity
 app = Flask(__name__)
 
 
@@ -12,7 +13,8 @@ app = Flask(__name__)
 def listStates():
     """display a HTML page"""
     states = storage.all(State).values()
-    return render_template("10-hbnb_filters.html", states=states)
+    amenities = storage.all(Amenity).values()
+    return render_template("10-hbnb_filters.html", states=states, amenities=amenities)
 
 
 @app.teardown_appcontext
